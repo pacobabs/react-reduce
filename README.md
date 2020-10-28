@@ -181,7 +181,7 @@ The provider component to wrap your application.
 |-------|-------------|-------------|---------------|
 | store | any | The store value returned by useReducer or createStore | Required |
 | dispatch | Function | The dispatch function returned by useReducer or createStore | Required |
-| context | React Context or [React Context] | your custom context if you want to hold the reference. it can be an array of two Contexts, the first for your state the second for the dispatch function | Required |
+| context | React Context or [React Context] | your custom context if you want to hold the reference. it can be an array of two Contexts, the first for your state the second for the dispatch function | Optional |
 | equalityFn | Function | Function used to compare old vs new state; by default it performs shallow equality check | Optional |
 
 ### createStore
@@ -201,7 +201,7 @@ This hook is used to get the dispacth function on your components.
 
 | Param | Type | Description | Optional / Required |
 |-------|-------------|-------------|---------------|
-| context | React Context | The dispatch Context passed to the provider | Optional |
+| context | React Context |  The dispatch Context that you've passed to the provider in the context props as second element of the array. This is the case when you hold the reference of your own contexts.  | Optional |
 
 - **Return Value**: the dispatch function
 
@@ -212,7 +212,7 @@ This hook is used to access the state.
 | Param | Type | Description | Optional / Required |
 |-------|-------------|-------------|---------------|
 | selector | Function | The selector function. takes the state as param. the return will be the return value of `useSelector` | Optional |
-| context | React Context | The state Context passed to the provider | Optional |
+| context | React Context | The state Context that you've passed to the provider in the context props as first element of the array. This is the case when you hold the reference of your own contexts.  | Optional |
 
 - **Return Value**: the value returned by the selector function
 
@@ -234,7 +234,7 @@ This hook is not very useful. It's the same as calling React's useContext. It gi
 
 | Param | Type | Description | Optional / Required |
 |-------|-------------|-------------|---------------|
-| context | React Context | The state Context passed to the provider | Optional |
+| context | React Context |  The state Context that you've passed to the provider in the context props as first element of the array. This is the case when you hold the reference of your own contexts.   | Optional |
 
 - **Return Value**: Context value
 
