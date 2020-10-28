@@ -1,6 +1,6 @@
 {
   "name": "react-reduce-hooks",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easy React application state management with context hooks and usereducer.",
   "source": "src/index.tsx",
   "main": "dist/index.js",
