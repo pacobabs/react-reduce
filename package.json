@@ -1,0 +1,38 @@
+{
+  "name": "react-reduce",
+  "version": "1.0.1",
+  "description": "React application state management with context hooks and usereducer made easy.",
+  "source": "src/index.tsx",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "browser": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "microbundle watch",
+    "build": "microbundle --jsx React.createElement",
+    "pub": "npm run pub:patch",
+    "pub:patch": "npm run build && npm version patch --force && npm publish",
+    "pub:minor": "npm run build && npm version minor--force && npm publish",
+    "pub:major": "npm run build && npm version major --force && npm publish",
+    "test": ""
+  },
+  "keywords": [
+    "react",
+    "reduce",
+    "state management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pacobabs/react-reduce"
+  },
+  "author": "pacobabs",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.12.4",
+    "use-context-selection": "^1.4.2"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.53",
+    "react": "^17.0.1"
+  }
+}
