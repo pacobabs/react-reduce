@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es5",
+    "lib": ["es2020"],
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "jsx": "preserve",
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules", "**/*.d.ts"],
+  "include": ["**/*.ts", "**/*.tsx"]
+}
