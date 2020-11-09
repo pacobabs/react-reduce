@@ -181,7 +181,7 @@ The provider component to wrap your application.
 |-------|-------------|-------------|---------------|
 | store | any | The store value returned by useReducer or createStore | Required |
 | dispatch | Function | The dispatch function returned by useReducer or createStore | Required |
-| context | React Context or [React Context] | your custom context if you want to hold the reference. it can be an array of two Contexts, the first for your state the second for the dispatch function | Optional |
+| context | React Context or [React Context, React Context or undefined] | your custom context if you want to hold the reference. it can be an array of two Contexts, the first for your state the second for the dispatch function | Optional |
 | equalityFn | Function | Function used to compare old vs new state; by default it performs shallow equality check | Optional |
 
 ### createStore

@@ -1,10 +1,12 @@
 import React, { useContext, useReducer, ReactNode } from 'react'
 import { createContext, useContextSelection } from 'use-context-selection'
 
+type Context = React.Context<any> | [React.Context<any>, undefined | React.Context<any>]
+
 type Props = {
   store: any
   dispatch: React.Dispatch<any>
-  context?: React.Context<any>
+  context?: Context
   equalityFn?: (a: any, b: any) => boolean
   children: ReactNode
 }
@@ -22,7 +24,7 @@ const Provider = (props: Props) => {
   )
 }
 
-const initContext = (context?: React.Context<any>, equalityFn?: (a: any, b: any) => boolean) => {
+const initContext = (context?: Context, equalityFn?: (a: any, b: any) => boolean) => {
   if (StateContext && DispatchContext) return
   StateContext = Array.isArray(context) ? context[0] : context || createContext(undefined, equalityFn)
   DispatchContext = Array.isArray(context) && context.length > 1 ? context[1] : createContext(undefined)
