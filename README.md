@@ -11,6 +11,7 @@
   - [Documentation](#documentation)
   - [Example](#example)
   - [Problems or Suggestions](#problems-or-suggestions)
+  - [Integration with dev tools](#devtools)
 
 <!-- /TOC -->
 
@@ -255,3 +256,7 @@ This is a simple Counter application; it uses a reducer to manage state and conn
 ## Problems or Suggestions
 
 Please feel free to open an issue on [github](https://github.com/pacobabs/react-reduce-hooks).
+
+## Devtools
+
+For integration with devtools check my other library [`reduce-devtools-extension`](https://github.com/pacobabs/reduce-devtools-extension)
