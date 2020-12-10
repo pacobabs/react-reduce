@@ -1,11 +1,10 @@
 {
   "name": "react-reduce-hooks",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Easy React application state management with context hooks and usereducer.",
   "source": "src/index.tsx",
   "main": "dist/index.js",
-  "module": "dist/index.module.js",
-  "browser": "dist/index.umd.js",
+  "umd:main": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "microbundle watch",
