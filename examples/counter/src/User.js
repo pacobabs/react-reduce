@@ -1,8 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useSelector, useDispatch } from 'react-reduce-hooks'
 
 const User = () => {
-  console.count('user')
+  useEffect(() => {
+    console.count("User -------");
+  });
   const name = useSelector((state) => state.name)
   const dispatch = useDispatch()
   const inputRef = useRef()

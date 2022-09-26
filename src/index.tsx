@@ -32,16 +32,16 @@ const createStore = (reducer: any, initialState?: any) => {
   return initialState === undefined ? useReducer(reducer, initialState, reducer) : useReducer(reducer, initialState)
 }
 
-const useDispatch = (Context: Context<any> = DispatchContext) => {
-  return useContext(Context)
+const useDispatch = (context: Context<any> = DispatchContext) => {
+  return useContext(context)
 }
 
-const useSelector = (selector: (state: any) => any, Context: Context<any> = StateContext) => {
-  return useContextSelector(Context, selector)
+const useSelector = (selector: (state: any) => any, context: Context<any> = StateContext) => {
+  return useContextSelector(context, selector)
 }
 
-const useStore = (Context: Context<any> = StateContext) => {
-  return useContext(Context)
+const useStore = (context: Context<any> = StateContext) => {
+  return useContext(context)
 }
 
 export { Provider, createContext, createStore, useStore, useDispatch, useSelector }
